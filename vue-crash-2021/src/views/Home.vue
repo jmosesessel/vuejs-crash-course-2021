@@ -1,8 +1,10 @@
 <template>
-	<div v-show="showAddTask">
-		<AddTask @add-task="addTask" />
 
-	</div>
+	<AddTask
+		v-show="showAddTask"
+		@add-task="addTask"
+	/>
+
 	<Tasks
 		@toggle-reminder="toggleReminder"
 		@delete-task="deleteTask"
@@ -16,8 +18,8 @@ import AddTask from "../components/AddTask.vue";
 
 export default {
 	props: {
-        showAddTask: Boolean,
-    },
+		showAddTask: Boolean,
+	},
 	name: "Home",
 	components: {
 		Tasks,
